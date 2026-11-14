@@ -9,10 +9,6 @@ rules:
 
 # 使用设备当前网络的系统 DNS（通常是路由器的 DNS）。
 dns:
-  enable: true
-  default-nameserver:
-    - 223.5.5.5
-    - system
   nameserver:
     - system
 
