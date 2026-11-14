@@ -9,8 +9,8 @@
 - **功能**：去广告、画中画、后台播放、翻译
 - **适用**：YouTube & YouTube Music
 - **Surge 安装**：[链接](YouTube.Enhance.sgmodule?raw=true)
-- **Stash 安装**：[链接](YouTube.Enhance.stoverride?raw=true)
-- **Stash 直连配置**：[Stash.YouTube.Direct.yaml](Stash.YouTube.Direct.yaml?raw=true)
+- **Stash 安装**：[覆写文件](YouTube.Enhance.stoverride?raw=true) / [一键安装](https://link.stash.ws/install-override/raw.githubusercontent.com/temurlee/sgmodule/master/YouTube.Enhance.stoverride)
+- **Stash 直连配置**：[配置文件](Stash.YouTube.Direct.yaml?raw=true) / [一键导入](https://link.stash.ws/install-config/raw.githubusercontent.com/temurlee/sgmodule/master/Stash.YouTube.Direct.yaml)
 
 #### Stash 使用说明
 
