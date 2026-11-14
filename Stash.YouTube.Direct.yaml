@@ -30,7 +30,7 @@ http:
       max-size: 5242880
       timeout: 30
 
-    - name: 'YouTubeEnhanceRequest'
+    - name: 'YouTubeEnhanceInit'
       type: request
       match: '^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&ack.*'
       require-body: true
@@ -38,7 +38,7 @@ http:
       max-size: 1048576
       timeout: 10
 
-    - name: 'YouTubeEnhanceRequest'
+    - name: 'YouTubeEnhanceLogEvent'
       type: request
       match: '^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/log_event'
       timeout: 10
@@ -47,6 +47,9 @@ script-providers:
   'YouTubeEnhanceResponse':
     url: 'https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js'
     interval: 86400
-  'YouTubeEnhanceRequest':
+  'YouTubeEnhanceInit':
+    url: 'https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.request.js'
+    interval: 86400
+  'YouTubeEnhanceLogEvent':
     url: 'https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.request.js'
     interval: 86400
