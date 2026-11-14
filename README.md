@@ -49,6 +49,6 @@
 
 1. 在 Stash 的「配置 → 覆写」中导入 `YouTube.Enhance.stoverride` 并启用；或在「配置」中直接导入 `Stash.YouTube.Direct.yaml`。
 2. 在 Stash → MitM 中生成并安装 CA 证书，然后在 iOS「设置 → 通用 → 关于本机 → 证书信任设置」中信任该证书。
-3. 如果设备所在网络已经完成科学上网、不需要 Stash 再代理，使用 `Stash.YouTube.Direct.yaml`；它使用 `mode: direct` 且不包含代理。使用覆写时，请在 Stash 首页把模式切到「直连 / Direct」。
+3. 如果设备所在网络已经完成科学上网、不需要 Stash 再代理，使用 `Stash.YouTube.Direct.yaml`；它不配置任何代理节点，并用 `MATCH,DIRECT` 兜底所有流量。使用覆写时，请在 Stash 首页把模式切到「直连 / Direct」。
 4. MitM 只对 `youtubei.googleapis.com` 和 `*.googlevideo.com` 开启，其他 App 的 HTTPS 不会被解密。
 5. 脚本从 `raw.githubusercontent.com` 更新；如果设备无法访问该域名，可以把 `Script/Youtube/` 下的两个 JS 保存到本地，用 `script-providers.<name>.path` 引用。
