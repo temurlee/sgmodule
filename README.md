@@ -47,7 +47,7 @@
 
 #### 使用说明
 
-> 直连配置是独立配置文件，不是覆写。请在 Stash 的「配置」中导入；如果一键链接失败，可以把文件下载到 iCloud，选择用 Stash 打开。
+> 直连配置是独立配置文件，不是覆写。请在 Stash 的「配置」中导入；如果一键链接失败，可以把文件下载到 iCloud，选择用 Stash 打开。若仍提示解析错误，改用 `YouTube.Enhance.stoverride`，再把首页模式切到「直连 / Direct」。
 
 1. 在 Stash 的「配置 → 覆写」中导入 `YouTube.Enhance.stoverride` 并启用；或在「配置」中直接导入 `Stash.YouTube.Direct.yaml`。
 2. 在 Stash → MitM 中生成并安装 CA 证书，然后在 iOS「设置 → 通用 → 关于本机 → 证书信任设置」中信任该证书。
