@@ -1,0 +1,41 @@
+name: 'YouTube Enhance (Stash)'
+desc: 'YouTube / YouTube Music 去广告、画中画、后台播放。移植自 Maasea/sgmodule。'
+author: 'Maasea (original) / temurlee (Stash conversion)'
+homepage: 'https://github.com/temurlee/sgmodule'
+date: '2026-11-14'
+version: '1.0.0'
+
+http:
+  mitm:
+    - 'youtubei.googleapis.com'
+    - '*.googlevideo.com'
+
+  script:
+    - name: 'Maasea.YouTube.response'
+      type: response
+      match: '^https:\/\/youtubei\.googleapis\.com\/(youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch|log_event|config))(\?(.*))?$'
+      require-body: true
+      binary-mode: true
+      max-size: 10485760
+      timeout: 30
+
+    - name: 'Maasea.YouTube.request'
+      type: request
+      match: '^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&ack.*'
+      require-body: true
+      binary-mode: true
+      max-size: 1048576
+      timeout: 10
+
+    - name: 'Maasea.YouTube.request'
+      type: request
+      match: '^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/log_event'
+      timeout: 10
+
+script-providers:
+  'Maasea.YouTube.response':
+    url: 'https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.response.js'
+    interval: 86400
+  'Maasea.YouTube.request':
+    url: 'https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.request.js'
+    interval: 86400
